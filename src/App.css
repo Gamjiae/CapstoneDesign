@@ -1,0 +1,275 @@
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+  width: 85%;
+  margin-top: 20px;
+}
+
+.search {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 45px;
+  font-size: 17px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-btn {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  background-position: 1px 1px;
+  background-image: url('./images/searchImg.png');
+}
+
+.Button {
+  background-color:white;
+  height: 30px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px; 
+  background-repeat: no-repeat;
+  background-size: 13px;
+  padding-right: 20px;
+}
+
+.Location {
+  position: fixed;
+  z-index: 2;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  right: 20px; 
+  bottom: 20px; 
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.speed-button {
+  width: 62px;
+  height: 59px;
+  margin-right: 15px;
+  background-color: white;
+}
+
+.speed-button.selected {
+  width: 62px;
+  height: 59px;
+  margin-right: 13px;
+  background-color: #073DFF;
+}
+
+.type-button {
+  width: 70px;
+  height: 50px;
+  font-size: 17px;
+  margin-right: 13px;
+  border-color:#6787fa;
+  border-radius: 10%;
+  border-style: solid;
+  background-color: white;
+}
+
+.type-button.selected {
+  width: 70px;
+  height: 50px;
+  color: white;
+  font-size: 17px;
+  margin-right: 13px;
+  background-color: #6787fa;
+}
+
+.option-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  bottom: 67px;
+  background-color: white;
+  z-index: 3;
+}
+
+.option-row {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px
+}
+.apply-button {
+  position: fixed;
+  width: 100%;
+  height: 67px;
+  bottom: 0;
+  left: 0px;
+  background-color:#073DFF;
+  color: white;
+}
+
+/* detail */
+.detail {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  bottom: 0;
+  padding-left: 15px;
+  background-color: white;
+  z-index: 3;
+}
+.detail-container {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 3%;
+}
+.open-modal-btn {
+  position: absolute;
+  z-index: 3;
+  right: 15px;
+  top: 22px;
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  background-image: url('./images/upButtonImg.png');
+}
+.connector-container { 
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.connector-box {
+  flex-shrink: 0;
+  margin-right: 10px;
+  font-size: 13px;
+  padding: 3px;  
+  border-radius: 5px;
+  background-color: #D9D9D9;
+}
+
+/* DetailModal.js의 css */
+.detail-modal {
+  position: fixed; /* fixed 위치를 유지 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y:auto; /* 스크롤 가능하도록 설정 */
+}
+
+
+/* 헤더와 닫기 버튼 */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* 닫기 버튼 */
+.close-modal {
+  background-image: url('./images/buttonImg.png');
+  margin-left: auto;
+  margin-top: 24px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* 충전기 박스 스타일 */
+.charging-box-category {
+  margin-bottom: 20px; /* 카테고리 간의 간격 조정 */
+}
+
+.charging-boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charging-box {
+  flex: 0 0 calc(50% - 10px); /* 50% 너비로 설정, 여백은 10px */
+  margin: 5px;
+  background-color: #EBEBEB;
+  border-radius: 8px;
+}
+
+.charger-id {
+  width: 121px;
+  height: 60px;
+  flex-shrink: 0;
+  color: #777;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.charging-box {
+  width: 175px;
+  height: 94px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #EBEBEB;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  background-color: #EBEBEB;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.content-container {
+  flex: 1; /* 콘텐츠 영역을 남은 공간을 차지하게 함 */
+  overflow-y: auto; /* 콘텐츠 영역에 스크롤 적용 */
+  padding: 20px;
+  box-sizing: border-box;
+}
